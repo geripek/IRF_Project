@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,7 +12,7 @@ namespace IRF_YMOOIX.Osztalyok
     {
        public Szovegek()
         {
-            //this.Font = new Font("Times New Roman", 16);
+            Font = new Font("Times New Roman", 10F, FontStyle.Bold);
         }
     }
 }

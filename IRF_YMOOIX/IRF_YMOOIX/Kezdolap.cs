@@ -16,9 +16,10 @@ namespace IRF_YMOOIX
         {
             InitializeComponent();
             szovegek1.Text = "A Tovább gombra kattintva eljut a következő lapra,\namin az európai országok 2008-2019 közötti népességváltozását láthatja majd évekre bontva és diagrammon!";
+            gombok2.Text = "Tovább";
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void gombok2_Click(object sender, EventArgs e)
         {
             Kimutatas k = new Kimutatas();
             k.Show();
