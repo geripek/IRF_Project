@@ -155,5 +155,24 @@ namespace IRF_YMOOIX
         {
             timer11.Stop();
         }
+
+        private void gombok3_Click(object sender, EventArgs e) //Alaphelyzet
+        {
+            szovegek3.Visible = true;
+            listBox1.SelectedItem = orsz[j].nev;
+            var alap = from x in adat
+                       where x.orszag == orsz[j].nev
+                       select new
+                       {
+                           Év = x.ev,
+                           Népesség = x.nepesseg,
+                       };
+            dataGridView1.DataSource = alap.ToList();
+            Diagram();
+            szovegek3.Text = orsz[j].nev;
+            timer11.Stop();
+            gombok2.Visible = false;
+            gombok3.Visible = false;
+        }
     }
 }
