@@ -38,6 +38,9 @@
             this.szovegek1 = new IRF_YMOOIX.Osztalyok.Szovegek();
             this.timer11 = new IRF_YMOOIX.Osztalyok.Timer1();
             this.szovegek2 = new IRF_YMOOIX.Osztalyok.Szovegek();
+            this.gombok1 = new IRF_YMOOIX.Osztalyok.Gombok();
+            this.gombok2 = new IRF_YMOOIX.Osztalyok.Gombok();
+            this.gombok3 = new IRF_YMOOIX.Osztalyok.Gombok();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timer11)).BeginInit();
@@ -84,6 +87,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(210, 22);
             this.textBox1.TabIndex = 3;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // szovegek1
             // 
@@ -105,17 +109,51 @@
             // 
             this.szovegek2.AutoSize = true;
             this.szovegek2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.szovegek2.Location = new System.Drawing.Point(817, 198);
+            this.szovegek2.Location = new System.Drawing.Point(817, 191);
             this.szovegek2.Name = "szovegek2";
             this.szovegek2.Size = new System.Drawing.Size(82, 19);
             this.szovegek2.TabIndex = 6;
             this.szovegek2.Text = "szovegek2";
+            // 
+            // gombok1
+            // 
+            this.gombok1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.gombok1.Location = new System.Drawing.Point(821, 236);
+            this.gombok1.Name = "gombok1";
+            this.gombok1.Size = new System.Drawing.Size(85, 35);
+            this.gombok1.TabIndex = 7;
+            this.gombok1.Text = "gombok1";
+            this.gombok1.UseVisualStyleBackColor = true;
+            this.gombok1.Click += new System.EventHandler(this.gombok1_Click);
+            // 
+            // gombok2
+            // 
+            this.gombok2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.gombok2.Location = new System.Drawing.Point(921, 236);
+            this.gombok2.Name = "gombok2";
+            this.gombok2.Size = new System.Drawing.Size(85, 35);
+            this.gombok2.TabIndex = 8;
+            this.gombok2.Text = "gombok2";
+            this.gombok2.UseVisualStyleBackColor = true;
+            // 
+            // gombok3
+            // 
+            this.gombok3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.gombok3.Location = new System.Drawing.Point(821, 285);
+            this.gombok3.Name = "gombok3";
+            this.gombok3.Size = new System.Drawing.Size(185, 35);
+            this.gombok3.TabIndex = 9;
+            this.gombok3.Text = "gombok3";
+            this.gombok3.UseVisualStyleBackColor = true;
             // 
             // Kimutatas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1123, 621);
+            this.Controls.Add(this.gombok3);
+            this.Controls.Add(this.gombok2);
+            this.Controls.Add(this.gombok1);
             this.Controls.Add(this.szovegek2);
             this.Controls.Add(this.szovegek1);
             this.Controls.Add(this.textBox1);
@@ -141,5 +179,8 @@
         private Osztalyok.Szovegek szovegek1;
         private Osztalyok.Timer1 timer11;
         private Osztalyok.Szovegek szovegek2;
+        private Osztalyok.Gombok gombok3;
+        private Osztalyok.Gombok gombok2;
+        private Osztalyok.Gombok gombok1;
     }
 }

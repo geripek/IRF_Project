@@ -30,6 +30,10 @@ namespace IRF_YMOOIX
             szovegek1.Text = "Keressen rá az országra! " +
                 "(beír egy betűt és kiadja az országokat, amikben benne van, de különbséget tesz a nagy- és kisbetűk között)";
             szovegek2.Text = "Kattinstson az Indít gombra\naz automata váltásért!";
+
+            gombok1.Text = "Indít";
+            gombok2.Text = "Stop";
+            gombok3.Text = "Alaphelyzet";
         }
 
         private void LoadData()
@@ -68,6 +72,27 @@ namespace IRF_YMOOIX
                     orsz.Add(o);
                 }
             }
+        }
+
+        private void gombok1_Click(object sender, EventArgs e)
+        {
+            
+            
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            OrszagKeres();
+        }
+
+        void OrszagKeres()
+        {
+            var o = from x in orsz
+                    where x.nev.Contains(textBox1.Text)
+                    select x;
+
+            listBox1.DisplayMember = "nev";
+            listBox1.DataSource = o.ToList();
         }
     }
 }
