@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace IRF_YMOOIX
 {
-    public partial class Form1 : Form
+    public partial class Kezdolap : Form
     {
-        public Form1()
+        public Kezdolap()
         {
             InitializeComponent();
         }
