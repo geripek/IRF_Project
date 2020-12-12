@@ -88,9 +88,10 @@
             // szovegek1
             // 
             this.szovegek1.AutoSize = true;
-            this.szovegek1.Location = new System.Drawing.Point(12, 9);
+            this.szovegek1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.szovegek1.Location = new System.Drawing.Point(8, 9);
             this.szovegek1.Name = "szovegek1";
-            this.szovegek1.Size = new System.Drawing.Size(76, 17);
+            this.szovegek1.Size = new System.Drawing.Size(82, 19);
             this.szovegek1.TabIndex = 5;
             this.szovegek1.Text = "szovegek1";
             // 
@@ -103,9 +104,10 @@
             // szovegek2
             // 
             this.szovegek2.AutoSize = true;
+            this.szovegek2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
             this.szovegek2.Location = new System.Drawing.Point(817, 198);
             this.szovegek2.Name = "szovegek2";
-            this.szovegek2.Size = new System.Drawing.Size(76, 17);
+            this.szovegek2.Size = new System.Drawing.Size(82, 19);
             this.szovegek2.TabIndex = 6;
             this.szovegek2.Text = "szovegek2";
             // 
@@ -113,7 +115,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1057, 621);
+            this.ClientSize = new System.Drawing.Size(1123, 621);
             this.Controls.Add(this.szovegek2);
             this.Controls.Add(this.szovegek1);
             this.Controls.Add(this.textBox1);

@@ -19,12 +19,17 @@ namespace IRF_YMOOIX
 
         public int i = 0; //országok száma
         public int j = 0; //timerhez
+
         public Kimutatas()
         {
             InitializeComponent();
 
             LoadData();
             LoadNames();
+
+            szovegek1.Text = "Keressen rá az országra! " +
+                "(beír egy betűt és kiadja az országokat, amikben benne van, de különbséget tesz a nagy- és kisbetűk között)";
+            szovegek2.Text = "Kattinstson az Indít gombra\naz automata váltásért!";
         }
 
         private void LoadData()
