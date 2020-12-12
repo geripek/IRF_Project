@@ -94,5 +94,19 @@ namespace IRF_YMOOIX
             listBox1.DisplayMember = "nev";
             listBox1.DataSource = o.ToList();
         }
+
+        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            var ev = from x in adat
+                     where x.orszag == ((Orszagok)listBox1.SelectedItem).nev
+                     select new
+                     {
+                         Év = x.ev,
+                         Népesség = x.nepesseg,
+                     };
+
+            dataGridView1.DataSource = ev.ToList();
+            
+        }
     }
 }
