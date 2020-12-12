@@ -79,7 +79,7 @@ namespace IRF_YMOOIX
             }
         }
 
-        private void gombok1_Click(object sender, EventArgs e)
+        private void gombok1_Click(object sender, EventArgs e) //Indít
         {
             int a = 0;
             szovegek3.Visible = true;
@@ -93,6 +93,8 @@ namespace IRF_YMOOIX
                       };
             dataGridView1.DataSource = tim.ToList();
             Diagram();
+            szovegek3.Text = orsz[a].nev;
+            timer11.Start();
             gombok2.Visible = true;
             gombok3.Visible = true;   
         }
@@ -144,9 +146,14 @@ namespace IRF_YMOOIX
             chart1.Series[0].ChartType = SeriesChartType.Line;
         }
 
-        private void gombok4_Click(object sender, EventArgs e)
+        private void gombok4_Click(object sender, EventArgs e) //Vissza
         {
             Close();
+        }
+
+        private void gombok2_Click(object sender, EventArgs e) //Stop
+        {
+            timer11.Stop();
         }
     }
 }

@@ -7,7 +7,7 @@ using System.Timers;
 
 namespace IRF_YMOOIX.Osztalyok
 {
-    class Timer1: Timer
+    class Timer1: System.Timers.Timer
     {
         public Timer1()
         {
