@@ -58,6 +58,7 @@
     <Compile Include="Kimutatas.Designer.cs">
       <DependentUpon>Kimutatas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Osztalyok\Orszagok.cs" />
     <Compile Include="Osztalyok\Szovegek.cs">
       <SubType>Component</SubType>
     </Compile>
