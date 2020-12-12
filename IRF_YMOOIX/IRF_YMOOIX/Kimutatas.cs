@@ -40,7 +40,7 @@ namespace IRF_YMOOIX
             gombok3.Visible = false;
             gombok4.Text = "Vissza";
             szovegek3.Visible = false;
-            
+                                    
         }
 
         private void LoadData()
@@ -96,7 +96,7 @@ namespace IRF_YMOOIX
             dataGridView1.DataSource = tim.ToList();
             Diagram();
             szovegek3.Text = orsz[a].nev;
-            timer1.Start();
+            automata1.Start();
             gombok2.Visible = true;
             gombok3.Visible = true;   
         }
@@ -155,7 +155,7 @@ namespace IRF_YMOOIX
 
         private void gombok2_Click(object sender, EventArgs e) //Stop
         {
-            timer1.Stop();
+            automata1.Stop();
         }
 
         private void gombok3_Click(object sender, EventArgs e) //Alaphelyzet
@@ -173,12 +173,13 @@ namespace IRF_YMOOIX
             dataGridView1.DataSource = alap.ToList();
             Diagram();
             szovegek3.Text = orsz[j].nev;
-            timer1.Stop();
+            automata1.Stop();
             gombok2.Visible = false;
             gombok3.Visible = false;
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+
+        private void automata1_Tick(object sender, EventArgs e)
         {
 
         }

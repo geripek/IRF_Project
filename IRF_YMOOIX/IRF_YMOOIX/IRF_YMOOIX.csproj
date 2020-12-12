@@ -60,6 +60,9 @@
       <DependentUpon>Kimutatas.cs</DependentUpon>
     </Compile>
     <Compile Include="Osztalyok\Adatok.cs" />
+    <Compile Include="Osztalyok\Automata.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Osztalyok\Gombok.cs">
       <SubType>Component</SubType>
     </Compile>

@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -43,7 +42,7 @@
             this.gombok3 = new IRF_YMOOIX.Osztalyok.Gombok();
             this.gombok4 = new IRF_YMOOIX.Osztalyok.Gombok();
             this.szovegek3 = new IRF_YMOOIX.Osztalyok.Szovegek();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.automata1 = new IRF_YMOOIX.Osztalyok.Automata();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
@@ -148,7 +147,7 @@
             // gombok4
             // 
             this.gombok4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.gombok4.Location = new System.Drawing.Point(921, 539);
+            this.gombok4.Location = new System.Drawing.Point(956, 548);
             this.gombok4.Name = "gombok4";
             this.gombok4.Size = new System.Drawing.Size(85, 35);
             this.gombok4.TabIndex = 10;
@@ -166,9 +165,10 @@
             this.szovegek3.TabIndex = 11;
             this.szovegek3.Text = "szovegek3";
             // 
-            // timer1
+            // automata1
             // 
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.automata1.Interval = 5000;
+            this.automata1.Tick += new System.EventHandler(this.automata1_Tick);
             // 
             // Kimutatas
             // 
@@ -208,6 +208,6 @@
         private Osztalyok.Gombok gombok1;
         private Osztalyok.Gombok gombok4;
         private Osztalyok.Szovegek szovegek3;
-        private System.Windows.Forms.Timer timer1;
+        private Osztalyok.Automata automata1;
     }
 }
