@@ -55,7 +55,7 @@ namespace IRF_YMOOIX
             {
                 while (!sr.EndOfStream)
                 {
-                    string[] line = sr.ReadLine().Split(",");
+                    string[] line = sr.ReadLine().Split(',');
                     Orszagok o = new Orszagok();
                     o.nev = line[0];
                     i++;
