@@ -58,6 +58,12 @@
     <Compile Include="Kimutatas.Designer.cs">
       <DependentUpon>Kimutatas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Osztalyok\Szovegek.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Osztalyok\Timer1.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Kezdolap.resx">
@@ -88,5 +94,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
