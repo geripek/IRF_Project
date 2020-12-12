@@ -6,6 +6,7 @@ using System.Data;
 using System.Drawing;
 using System.IO;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -18,8 +19,9 @@ namespace IRF_YMOOIX
         List<Adatok> adat = new List<Adatok>();
         List<Orszagok> orsz = new List<Orszagok>();
 
-        public int i = 0; //országok száma
-        public int j = 0; //timerhez
+        public int i = 0; //országok száma 
+        public int j = 1; //timerhez, alaphelyzethez
+        public int b = 1; //timerhez, folytatáshoz
 
         public Kimutatas()
         {
@@ -34,13 +36,25 @@ namespace IRF_YMOOIX
             szovegek2.Text = "Kattintson az Indít gombra\naz automata váltásért!";
 
             gombok1.Text = "Indít";
+
             gombok2.Text = "Stop";
             gombok2.Visible = false;
+
             gombok3.Text = "Alaphelyzet";
             gombok3.Visible = false;
+
             gombok4.Text = "Vissza";
-            szovegek3.Visible = false;
-                                    
+
+            gombok5.Text = "Folytatás";
+            gombok5.Visible = false;
+
+            szovegek3.Visible = false; //diagramon az ország timer alatt
+            szovegek3.BackColor = Color.White;
+
+            var kezdo = from x in orsz
+                        select x;
+            listBox1.DisplayMember = "nev";
+            listBox1.DataSource = kezdo.ToList();
         }
 
         private void LoadData()
@@ -118,6 +132,7 @@ namespace IRF_YMOOIX
 
         private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
+            szovegek3.Visible = false;
             var ev = from x in adat
                      where x.orszag == ((Orszagok)listBox1.SelectedItem).nev
                      select new
@@ -156,6 +171,8 @@ namespace IRF_YMOOIX
         private void gombok2_Click(object sender, EventArgs e) //Stop
         {
             automata1.Stop();
+            automata2.Stop();
+            gombok5.Visible = true;
         }
 
         private void gombok3_Click(object sender, EventArgs e) //Alaphelyzet
@@ -174,14 +191,68 @@ namespace IRF_YMOOIX
             Diagram();
             szovegek3.Text = orsz[j].nev;
             automata1.Stop();
+            automata2.Stop();
             gombok2.Visible = false;
             gombok3.Visible = false;
+            gombok5.Visible = false;
         }
 
 
-        private void automata1_Tick(object sender, EventArgs e)
+        private void automata1_Tick(object sender, EventArgs e) //első timer - Indít
+        {
+            szovegek3.Visible = true;
+
+            if (j<i)
+            {
+                listBox1.SelectedItem = orsz[j].nev;
+                var a = from x in adat
+                        where x.orszag == orsz[j].nev
+                        select new
+                        {
+                            Év = x.ev,
+                            Népesség = x.nepesseg,
+                        };
+                dataGridView1.DataSource = a.ToList();
+                Diagram();
+                szovegek3.Text = orsz[j].nev;
+                j++;
+                b++;
+            }
+            else
+            {
+                automata1.Stop();
+            }
+        }
+
+        private void gombok5_Click(object sender, EventArgs e) //Folytatás
+        {
+            automata2.Start();
+        }
+
+        private void automata2_Tick(object sender, EventArgs e) //második timer - Folytatás
         {
 
+            szovegek3.Visible = true;
+
+            if (b < i)
+            {
+                listBox1.SelectedItem = orsz[b].nev;
+                var tim1 = from x in adat
+                           where x.orszag == orsz[b].nev
+                           select new
+                           {
+                               Év = x.ev,
+                               Népesség = x.nepesseg,
+                           };
+                dataGridView1.DataSource = tim1.ToList();
+                Diagram();
+                szovegek3.Text = orsz[b].nev;
+                b++;
+            }
+            else
+            {
+                automata2.Stop();
+            }
         }
     }
 }

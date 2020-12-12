@@ -11,7 +11,7 @@ namespace IRF_YMOOIX.Osztalyok
     {
         public Automata()
         {
-            this.Interval = 5000;
+            Interval = 4000;
         }
     }
 }
