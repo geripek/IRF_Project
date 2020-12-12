@@ -44,18 +44,19 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.button1.Location = new System.Drawing.Point(588, 274);
+            this.button1.Location = new System.Drawing.Point(609, 274);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(85, 27);
             this.button1.TabIndex = 1;
             this.button1.Text = "Tovább";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // Kezdolap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(685, 313);
+            this.ClientSize = new System.Drawing.Size(730, 313);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Name = "Kezdolap";
