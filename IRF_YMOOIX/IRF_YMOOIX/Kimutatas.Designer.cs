@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea3 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend3 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series3 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -41,6 +41,8 @@
             this.gombok1 = new IRF_YMOOIX.Osztalyok.Gombok();
             this.gombok2 = new IRF_YMOOIX.Osztalyok.Gombok();
             this.gombok3 = new IRF_YMOOIX.Osztalyok.Gombok();
+            this.gombok4 = new IRF_YMOOIX.Osztalyok.Gombok();
+            this.szovegek3 = new IRF_YMOOIX.Osztalyok.Szovegek();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.timer11)).BeginInit();
@@ -68,16 +70,16 @@
             // 
             // chart1
             // 
-            chartArea2.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea2);
-            legend2.Name = "Legend1";
-            this.chart1.Legends.Add(legend2);
+            chartArea3.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea3);
+            legend3.Name = "Legend1";
+            this.chart1.Legends.Add(legend3);
             this.chart1.Location = new System.Drawing.Point(12, 335);
             this.chart1.Name = "chart1";
-            series2.ChartArea = "ChartArea1";
-            series2.Legend = "Legend1";
-            series2.Name = "Series1";
-            this.chart1.Series.Add(series2);
+            series3.ChartArea = "ChartArea1";
+            series3.Legend = "Legend1";
+            series3.Name = "Series1";
+            this.chart1.Series.Add(series3);
             this.chart1.Size = new System.Drawing.Size(730, 248);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
@@ -147,11 +149,34 @@
             this.gombok3.Text = "gombok3";
             this.gombok3.UseVisualStyleBackColor = true;
             // 
+            // gombok4
+            // 
+            this.gombok4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.gombok4.Location = new System.Drawing.Point(921, 539);
+            this.gombok4.Name = "gombok4";
+            this.gombok4.Size = new System.Drawing.Size(85, 35);
+            this.gombok4.TabIndex = 10;
+            this.gombok4.Text = "gombok4";
+            this.gombok4.UseVisualStyleBackColor = true;
+            this.gombok4.Click += new System.EventHandler(this.gombok4_Click);
+            // 
+            // szovegek3
+            // 
+            this.szovegek3.AutoSize = true;
+            this.szovegek3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            this.szovegek3.Location = new System.Drawing.Point(621, 378);
+            this.szovegek3.Name = "szovegek3";
+            this.szovegek3.Size = new System.Drawing.Size(82, 19);
+            this.szovegek3.TabIndex = 11;
+            this.szovegek3.Text = "szovegek3";
+            // 
             // Kimutatas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1123, 621);
+            this.Controls.Add(this.szovegek3);
+            this.Controls.Add(this.gombok4);
             this.Controls.Add(this.gombok3);
             this.Controls.Add(this.gombok2);
             this.Controls.Add(this.gombok1);
@@ -183,5 +208,7 @@
         private Osztalyok.Gombok gombok3;
         private Osztalyok.Gombok gombok2;
         private Osztalyok.Gombok gombok1;
+        private Osztalyok.Gombok gombok4;
+        private Osztalyok.Szovegek szovegek3;
     }
 }

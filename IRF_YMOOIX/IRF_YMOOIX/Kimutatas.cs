@@ -34,7 +34,11 @@ namespace IRF_YMOOIX
 
             gombok1.Text = "Indít";
             gombok2.Text = "Stop";
+            gombok2.Visible = false;
             gombok3.Text = "Alaphelyzet";
+            gombok3.Visible = false;
+            gombok4.Text = "Vissza";
+            szovegek3.Visible = false;
         }
 
         private void LoadData()
@@ -77,8 +81,20 @@ namespace IRF_YMOOIX
 
         private void gombok1_Click(object sender, EventArgs e)
         {
-            
-            
+            int a = 0;
+            szovegek3.Visible = true;
+            listBox1.SelectedItem = orsz[a].nev;
+            var tim = from x in adat
+                      where x.orszag == orsz[a].nev
+                      select new
+                      {
+                          Év = x.ev,
+                          Népesség = x.nepesseg,
+                      };
+            dataGridView1.DataSource = tim.ToList();
+            Diagram();
+            gombok2.Visible = true;
+            gombok3.Visible = true;   
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -126,6 +142,11 @@ namespace IRF_YMOOIX
 
 
             chart1.Series[0].ChartType = SeriesChartType.Line;
+        }
+
+        private void gombok4_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
