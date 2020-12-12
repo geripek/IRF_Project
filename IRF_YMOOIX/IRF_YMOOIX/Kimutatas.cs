@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace IRF_YMOOIX
 {
@@ -106,7 +107,25 @@ namespace IRF_YMOOIX
                      };
 
             dataGridView1.DataSource = ev.ToList();
-            
+            Diagram();
+        }
+
+        public void Diagram()
+        {
+            chart1.DataSource = dataGridView1.DataSource;
+            chart1.Series[0] = new Series();
+            chart1.Series[0].XValueMember = dataGridView1.Columns[0].DataPropertyName;
+            chart1.Series[0].YValueMembers = dataGridView1.Columns[1].DataPropertyName;
+            chart1.DataSource = dataGridView1.DataSource;
+            chart1.Series[0].BorderWidth = 4;
+
+            var chartArea = chart1.ChartAreas[0];
+            chartArea.AxisX.MajorGrid.Enabled = false;
+            chartArea.AxisY.MajorGrid.Enabled = true;
+            chartArea.AxisY.IsStartedFromZero = false;
+
+
+            chart1.Series[0].ChartType = SeriesChartType.Line;
         }
     }
 }
