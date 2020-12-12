@@ -17,13 +17,14 @@ namespace IRF_YMOOIX
         List<Adatok> adat = new List<Adatok>();
         List<Orszagok> orsz = new List<Orszagok>();
 
-        
+        public int i = 0; //országok száma
+        public int j = 0; //timerhez
         public Kimutatas()
         {
             InitializeComponent();
 
             LoadData();
-            //LoadNames();
+            LoadNames();
         }
 
         private void LoadData()
@@ -43,6 +44,24 @@ namespace IRF_YMOOIX
                     adat.Add(a);
                 }
 
+            }
+        }
+
+        private void LoadNames()
+        {
+            orsz.Clear();
+
+            using (StreamReader sr = new StreamReader("orszagok.csv", Encoding.Default))
+            {
+                while (!sr.EndOfStream)
+                {
+                    string[] line = sr.ReadLine().Split(",");
+                    Orszagok o = new Orszagok();
+                    o.nev = line[0];
+                    i++;
+
+                    orsz.Add(o);
+                }
             }
         }
     }
