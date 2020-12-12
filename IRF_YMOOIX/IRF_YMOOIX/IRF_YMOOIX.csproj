@@ -67,9 +67,6 @@
     <Compile Include="Osztalyok\Szovegek.cs">
       <SubType>Component</SubType>
     </Compile>
-    <Compile Include="Osztalyok\Timer1.cs">
-      <SubType>Component</SubType>
-    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Kezdolap.resx">

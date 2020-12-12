@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
             System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
@@ -36,16 +37,15 @@
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.szovegek1 = new IRF_YMOOIX.Osztalyok.Szovegek();
-            this.timer11 = new IRF_YMOOIX.Osztalyok.Timer1();
             this.szovegek2 = new IRF_YMOOIX.Osztalyok.Szovegek();
             this.gombok1 = new IRF_YMOOIX.Osztalyok.Gombok();
             this.gombok2 = new IRF_YMOOIX.Osztalyok.Gombok();
             this.gombok3 = new IRF_YMOOIX.Osztalyok.Gombok();
             this.gombok4 = new IRF_YMOOIX.Osztalyok.Gombok();
             this.szovegek3 = new IRF_YMOOIX.Osztalyok.Szovegek();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timer11)).BeginInit();
             this.SuspendLayout();
             // 
             // listBox1
@@ -101,12 +101,6 @@
             this.szovegek1.Size = new System.Drawing.Size(82, 19);
             this.szovegek1.TabIndex = 5;
             this.szovegek1.Text = "szovegek1";
-            // 
-            // timer11
-            // 
-            this.timer11.Enabled = true;
-            this.timer11.Interval = 5000D;
-            this.timer11.SynchronizingObject = this;
             // 
             // szovegek2
             // 
@@ -172,6 +166,10 @@
             this.szovegek3.TabIndex = 11;
             this.szovegek3.Text = "szovegek3";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Kimutatas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -192,7 +190,6 @@
             this.Text = "Kimutatás";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.timer11)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -205,12 +202,12 @@
         private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
         private System.Windows.Forms.TextBox textBox1;
         private Osztalyok.Szovegek szovegek1;
-        private Osztalyok.Timer1 timer11;
         private Osztalyok.Szovegek szovegek2;
         private Osztalyok.Gombok gombok3;
         private Osztalyok.Gombok gombok2;
         private Osztalyok.Gombok gombok1;
         private Osztalyok.Gombok gombok4;
         private Osztalyok.Szovegek szovegek3;
+        private System.Windows.Forms.Timer timer1;
     }
 }
