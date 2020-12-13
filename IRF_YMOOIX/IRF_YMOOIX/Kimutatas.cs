@@ -61,7 +61,7 @@ namespace IRF_YMOOIX
         {
             adat.Clear();
 
-            using (StreamReader sr = new StreamReader(@"C:\Temp\adatok.csv", Encoding.Default))
+            using (StreamReader sr = new StreamReader(@"C:\Windows\Temp\adatok.csv", Encoding.Default))
             {
                 while (!sr.EndOfStream)
                 {
@@ -81,7 +81,7 @@ namespace IRF_YMOOIX
         {
             orsz.Clear();
 
-            using (StreamReader sr = new StreamReader(@"C:\Temp\orszagok.csv", Encoding.Default))
+            using (StreamReader sr = new StreamReader(@"C:\Windows\Temp\orszagok.csv", Encoding.Default))
             {
                 while (!sr.EndOfStream)
                 {
