@@ -30,15 +30,24 @@ namespace IRF_YMOOIX
             LoadData();
             LoadNames();
 
+            //Szöveg
+            
             szovegek1.Text = "Keressen rá az országra! " +
                 "(beír egy betűt és kiadja az országokat, amikben benne van, " +
                 "de különbséget tesz a nagy- és kisbetűk között)";
+
             szovegek2.Text = "Kattintson az Indít gombra\naz automata váltásért!";
+
+            szovegek3.Visible = false; //diagramon az ország timer alatt
+            szovegek3.BackColor = Color.White;
+
+            //Gombok
 
             gombok1.Text = "Indít";
 
             gombok2.Text = "Stop";
             gombok2.Visible = false;
+            gombok2.BackColor = Color.Red;
 
             gombok3.Text = "Alaphelyzet";
             gombok3.Visible = false;
@@ -47,10 +56,9 @@ namespace IRF_YMOOIX
 
             gombok5.Text = "Folytatás";
             gombok5.Visible = false;
+            gombok5.BackColor = Color.Green;
 
-            szovegek3.Visible = false; //diagramon az ország timer alatt
-            szovegek3.BackColor = Color.White;
-
+            //Első ország adatai
             
             var kezdo = from x in orsz
                         select x;

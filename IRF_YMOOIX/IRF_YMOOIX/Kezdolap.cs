@@ -15,7 +15,11 @@ namespace IRF_YMOOIX
         public Kezdolap()
         {
             InitializeComponent();
-            szovegek1.Text = "A Tovább gombra kattintva eljut a következő lapra,\namin az európai országok 2008-2019 közötti népességváltozását láthatja majd évekre bontva és diagrammon!";
+
+            szovegek1.Text = "A Tovább gombra kattintva eljut a következő lapra,\n" +
+                "amin az európai országok 2008-2019 közötti népességváltozását láthatja " +
+                "majd évekre bontva és diagramon!";
+
             gombok2.Text = "Tovább";
         }
 

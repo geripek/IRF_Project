@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
-            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
-            System.Windows.Forms.DataVisualization.Charting.Title title1 = new System.Windows.Forms.DataVisualization.Charting.Title();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea2 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend2 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Title title2 = new System.Windows.Forms.DataVisualization.Charting.Title();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
@@ -74,25 +74,25 @@
             // 
             this.chart1.BorderlineColor = System.Drawing.Color.Black;
             this.chart1.BorderlineWidth = 3;
-            chartArea1.Name = "ChartArea1";
-            this.chart1.ChartAreas.Add(chartArea1);
-            legend1.Enabled = false;
-            legend1.Name = "Legend1";
-            this.chart1.Legends.Add(legend1);
+            chartArea2.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea2);
+            legend2.Enabled = false;
+            legend2.Name = "Legend1";
+            this.chart1.Legends.Add(legend2);
             this.chart1.Location = new System.Drawing.Point(12, 335);
             this.chart1.Name = "chart1";
-            series1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            series1.ChartArea = "ChartArea1";
-            series1.Legend = "Legend1";
-            series1.Name = "Series1";
-            this.chart1.Series.Add(series1);
+            series2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            series2.ChartArea = "ChartArea1";
+            series2.Legend = "Legend1";
+            series2.Name = "Series1";
+            this.chart1.Series.Add(series2);
             this.chart1.Size = new System.Drawing.Size(730, 248);
             this.chart1.TabIndex = 2;
             this.chart1.Text = "chart1";
-            title1.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            title1.Name = "title";
-            title1.Text = "Népességváltozás 2008-2019";
-            this.chart1.Titles.Add(title1);
+            title2.Font = new System.Drawing.Font("Times New Roman", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            title2.Name = "title";
+            title2.Text = "Népességváltozás 2008-2019";
+            this.chart1.Titles.Add(title2);
             // 
             // textBox1
             // 
@@ -104,20 +104,21 @@
             // 
             // gombok5
             // 
+            this.gombok5.BackColor = System.Drawing.Color.Fuchsia;
             this.gombok5.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
             this.gombok5.Location = new System.Drawing.Point(821, 277);
             this.gombok5.Name = "gombok5";
             this.gombok5.Size = new System.Drawing.Size(185, 35);
             this.gombok5.TabIndex = 12;
             this.gombok5.Text = "gombok5";
-            this.gombok5.UseVisualStyleBackColor = true;
+            this.gombok5.UseVisualStyleBackColor = false;
             this.gombok5.Click += new System.EventHandler(this.gombok5_Click);
             // 
             // szovegek3
             // 
             this.szovegek3.AutoSize = true;
             this.szovegek3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
-            this.szovegek3.Location = new System.Drawing.Point(537, 351);
+            this.szovegek3.Location = new System.Drawing.Point(538, 344);
             this.szovegek3.Name = "szovegek3";
             this.szovegek3.Size = new System.Drawing.Size(82, 19);
             this.szovegek3.TabIndex = 11;
@@ -125,46 +126,50 @@
             // 
             // gombok4
             // 
+            this.gombok4.BackColor = System.Drawing.Color.Fuchsia;
             this.gombok4.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
             this.gombok4.Location = new System.Drawing.Point(956, 548);
             this.gombok4.Name = "gombok4";
             this.gombok4.Size = new System.Drawing.Size(85, 35);
             this.gombok4.TabIndex = 10;
             this.gombok4.Text = "gombok4";
-            this.gombok4.UseVisualStyleBackColor = true;
+            this.gombok4.UseVisualStyleBackColor = false;
             this.gombok4.Click += new System.EventHandler(this.gombok4_Click);
             // 
             // gombok3
             // 
+            this.gombok3.BackColor = System.Drawing.Color.Fuchsia;
             this.gombok3.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
             this.gombok3.Location = new System.Drawing.Point(821, 318);
             this.gombok3.Name = "gombok3";
             this.gombok3.Size = new System.Drawing.Size(185, 35);
             this.gombok3.TabIndex = 9;
             this.gombok3.Text = "gombok3";
-            this.gombok3.UseVisualStyleBackColor = true;
+            this.gombok3.UseVisualStyleBackColor = false;
             this.gombok3.Click += new System.EventHandler(this.gombok3_Click);
             // 
             // gombok2
             // 
+            this.gombok2.BackColor = System.Drawing.Color.Fuchsia;
             this.gombok2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
             this.gombok2.Location = new System.Drawing.Point(921, 236);
             this.gombok2.Name = "gombok2";
             this.gombok2.Size = new System.Drawing.Size(85, 35);
             this.gombok2.TabIndex = 8;
             this.gombok2.Text = "gombok2";
-            this.gombok2.UseVisualStyleBackColor = true;
+            this.gombok2.UseVisualStyleBackColor = false;
             this.gombok2.Click += new System.EventHandler(this.gombok2_Click);
             // 
             // gombok1
             // 
+            this.gombok1.BackColor = System.Drawing.Color.Fuchsia;
             this.gombok1.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
             this.gombok1.Location = new System.Drawing.Point(821, 236);
             this.gombok1.Name = "gombok1";
             this.gombok1.Size = new System.Drawing.Size(85, 35);
             this.gombok1.TabIndex = 7;
             this.gombok1.Text = "gombok1";
-            this.gombok1.UseVisualStyleBackColor = true;
+            this.gombok1.UseVisualStyleBackColor = false;
             this.gombok1.Click += new System.EventHandler(this.gombok1_Click);
             // 
             // szovegek2
@@ -201,6 +206,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Highlight;
             this.ClientSize = new System.Drawing.Size(1123, 621);
             this.Controls.Add(this.gombok5);
             this.Controls.Add(this.szovegek3);
