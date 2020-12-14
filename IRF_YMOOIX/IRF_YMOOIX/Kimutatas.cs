@@ -51,6 +51,7 @@ namespace IRF_YMOOIX
             szovegek3.Visible = false; //diagramon az ország timer alatt
             szovegek3.BackColor = Color.White;
 
+            
             var kezdo = from x in orsz
                         select x;
             listBox1.DisplayMember = "nev";
@@ -159,8 +160,8 @@ namespace IRF_YMOOIX
             chartArea.AxisY.MajorGrid.Enabled = true;
             chartArea.AxisY.IsStartedFromZero = false;
 
-
-            chart1.Series[0].ChartType = SeriesChartType.Line;
+            chart1.Series[0].Color = Color.Red;
+            chart1.Series[0].ChartType = SeriesChartType.Column;
         }
 
         private void gombok4_Click(object sender, EventArgs e) //Vissza
