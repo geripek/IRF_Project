@@ -34,7 +34,7 @@
             // 
             // gombok2
             // 
-            this.gombok2.BackColor = System.Drawing.Color.Fuchsia;
+            this.gombok2.BackColor = System.Drawing.Color.Orange;
             this.gombok2.Font = new System.Drawing.Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
             this.gombok2.Location = new System.Drawing.Point(815, 266);
             this.gombok2.Name = "gombok2";
@@ -58,7 +58,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BackColor = System.Drawing.Color.PapayaWhip;
             this.ClientSize = new System.Drawing.Size(912, 313);
             this.Controls.Add(this.gombok2);
             this.Controls.Add(this.szovegek1);
