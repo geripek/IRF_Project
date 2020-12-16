@@ -15,7 +15,7 @@ namespace IRF_YMOOIX.Osztalyok
             Height = 35;
             Width = 85;
             TextAlign = ContentAlignment.MiddleCenter;
-            Font = new Font("Times New Roman", 10F, System.Drawing.FontStyle.Bold);
+            Font = new Font("Times New Roman", 10F, FontStyle.Bold);
             BackColor = Color.Orange;
         }
     }

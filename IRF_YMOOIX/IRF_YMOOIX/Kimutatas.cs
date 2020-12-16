@@ -51,12 +51,12 @@ namespace IRF_YMOOIX
 
             gombok3.Text = "Alaphelyzet";
             gombok3.Visible = false;
-
-            gombok4.Text = "Vissza";
-
+                        
             gombok5.Text = "Folytatás";
             gombok5.Visible = false;
             gombok5.BackColor = Color.Green;
+
+            gombok4.Text = "Vissza";
 
             //Első ország adatai
             
@@ -104,26 +104,6 @@ namespace IRF_YMOOIX
             }
         }
 
-        private void gombok1_Click(object sender, EventArgs e) //Indít
-        {
-            int a = 0;
-            szovegek3.Visible = true;
-            listBox1.SelectedItem = orsz[a].nev;
-            var tim = from x in adat
-                      where x.orszag == orsz[a].nev
-                      select new
-                      {
-                          Év = x.ev,
-                          Népesség = x.nepesseg,
-                      };
-            dataGridView1.DataSource = tim.ToList();
-            Diagram();
-            szovegek3.Text = orsz[a].nev;
-            automata1.Start();
-            gombok2.Visible = true;
-            gombok3.Visible = true;   
-        }
-
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
             OrszagKeres();
@@ -160,7 +140,6 @@ namespace IRF_YMOOIX
             chart1.Series[0] = new Series();
             chart1.Series[0].XValueMember = dataGridView1.Columns[0].DataPropertyName;
             chart1.Series[0].YValueMembers = dataGridView1.Columns[1].DataPropertyName;
-            chart1.DataSource = dataGridView1.DataSource;
             chart1.Series[0].BorderWidth = 4;
 
             var chartArea = chart1.ChartAreas[0];
@@ -175,6 +154,52 @@ namespace IRF_YMOOIX
         private void gombok4_Click(object sender, EventArgs e) //Vissza
         {
             Close();
+        }
+
+        private void gombok1_Click(object sender, EventArgs e) //Indít
+        {
+            int a = 0;
+            szovegek3.Visible = true;
+            listBox1.SelectedItem = orsz[a].nev;
+            var tim = from x in adat
+                      where x.orszag == orsz[a].nev
+                      select new
+                      {
+                          Év = x.ev,
+                          Népesség = x.nepesseg,
+                      };
+            dataGridView1.DataSource = tim.ToList();
+            Diagram();
+            szovegek3.Text = orsz[a].nev;
+            automata1.Start();
+            gombok2.Visible = true;
+            gombok3.Visible = true;   
+        }
+
+        private void automata1_Tick(object sender, EventArgs e) //első timer - Indít
+        {
+            szovegek3.Visible = true;
+
+            if (j<i)
+            {
+                listBox1.SelectedItem = orsz[j].nev;
+                var a = from x in adat
+                        where x.orszag == orsz[j].nev
+                        select new
+                        {
+                            Év = x.ev,
+                            Népesség = x.nepesseg,
+                        };
+                dataGridView1.DataSource = a.ToList();
+                Diagram();
+                szovegek3.Text = orsz[j].nev;
+                j++;
+                b++;
+            }
+            else
+            {
+                automata1.Stop();
+            }
         }
 
         private void gombok2_Click(object sender, EventArgs e) //Stop
@@ -206,38 +231,11 @@ namespace IRF_YMOOIX
             gombok5.Visible = false;
         }
 
-
-        private void automata1_Tick(object sender, EventArgs e) //első timer - Indít
-        {
-            szovegek3.Visible = true;
-
-            if (j<i)
-            {
-                listBox1.SelectedItem = orsz[j].nev;
-                var a = from x in adat
-                        where x.orszag == orsz[j].nev
-                        select new
-                        {
-                            Év = x.ev,
-                            Népesség = x.nepesseg,
-                        };
-                dataGridView1.DataSource = a.ToList();
-                Diagram();
-                szovegek3.Text = orsz[j].nev;
-                j++;
-                b++;
-            }
-            else
-            {
-                automata1.Stop();
-            }
-        }
-
         private void gombok5_Click(object sender, EventArgs e) //Folytatás
         {
             automata2.Start();
-        }
-
+        }      
+   
         private void automata2_Tick(object sender, EventArgs e) //második timer - Folytatás
         {
 

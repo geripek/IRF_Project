@@ -12,8 +12,7 @@ namespace IRF_YMOOIX.Osztalyok
     {
        public Szovegek()
         {
-            Font = new Font("Times New Roman", 10F, FontStyle.Bold);
-            
+            Font = new Font("Times New Roman", 10F, FontStyle.Bold);   
         }
     }
 }
