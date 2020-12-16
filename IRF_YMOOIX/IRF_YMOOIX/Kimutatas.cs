@@ -233,6 +233,19 @@ namespace IRF_YMOOIX
 
         private void gombok5_Click(object sender, EventArgs e) //Folytatás
         {
+            int a = b;
+            szovegek3.Visible = true;
+            listBox1.SelectedItem = orsz[a].nev;
+            var tim = from x in adat
+                      where x.orszag == orsz[a].nev
+                      select new
+                      {
+                          Év = x.ev,
+                          Népesség = x.nepesseg,
+                      };
+            dataGridView1.DataSource = tim.ToList();
+            Diagram();
+            szovegek3.Text = orsz[a].nev;
             automata2.Start();
         }      
    
